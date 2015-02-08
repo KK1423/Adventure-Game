@@ -367,14 +367,13 @@ void init()
     //rooms[4]->startroomitem  = items[4];
     rooms[5]->startroomitem  = items[3];
     rooms[3]->startroomitem  = items[5];
-    rooms[2]->startroomitem = items[6];
     items[5]->usefunction = Potion;
     items[6]->usefunction = Rune;
     //holding = items[1];
     enemy *enemies[] =
     {
         new enemy(20,"The Rubber Ducky",rooms[4],items[4],4,3,2),
-        new enemy(50,"The Pepperoni Pizza",rooms[2],0,6,2,3)
+        new enemy(50,"The Pepperoni Pizza",rooms[2],items[6],6,2,3)
     };
 }
 void printNavChoices()
@@ -619,7 +618,6 @@ bool contains(string* keyword,string* searchwords)
     int a = 0,b = 0;
     while(keyword[a]!="@"&&searchwords[b]!="@")
     {
-        cout<<keyword[a]<<"|"<<searchwords[b]<<endl;
         if(decaps(keyword[a])==decaps(searchwords[b]))
         {
             b++;
@@ -768,6 +766,7 @@ void doattacks(string* input, room inroom)
             if(holding==0)
             {
                 cout<<"with what??"<<endl;
+                return;
             }
             traverse->HP-=holding->strength;
             cout<<"You attacked the "<<traverse->name<<" with your "<<holding->name<<"."<<endl;
@@ -787,7 +786,10 @@ void doattacks(string* input, room inroom)
 }
 void doinventory(string* words, room inroom)
 {
-
+    if(contains("inventory",words))
+    {
+        printInventory();
+    }
 }
 int checkformove(string* input,room inroom)
 {
@@ -894,6 +896,7 @@ string getString()
     doholds(words,*currentroom);
     doattacks(words,*currentroom);
     douses(words,*currentroom);
+    doinventory(words,*currentroom);
     if((int)s[0]>=48&&(int)s[0]<=52&&currentroom->connectedrooms[(int)s[0]-48]!=0)
     {
         type = 1;
