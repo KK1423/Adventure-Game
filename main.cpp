@@ -590,6 +590,13 @@ string attackwords[] =
 "strike",
 "@"
 };
+string usewords[] =
+{
+"eat",
+"drink",
+"use",
+"@"
+};
 string holdwords[] =
 {
     "hold",
@@ -749,27 +756,38 @@ void doattacks(string* input, room inroom)
             flag = true;
         i++;
     }
-    if(!flag)(return;)
-    item * lastone = 0;
+    if(!flag)
+        return;
+    enemy * lastone = 0;
     while(traverse!=0)
     {
         string* parseditemname = parse(traverse->name);
+        doskips(parseditemname,ignorewords);
         if(contains(input,parseditemname))
         {
-            if(lastone == 0)
+            if(holding==0)
             {
-                currentroom->startroomitem = traverse->nextitem;
-            }else
-            {
-                lastone->nextitem = traverse->nextitem;
+                cout<<"with what??"<<endl;
             }
-            traverse->nextitem = 0;
-            return traverse;
+            traverse->HP-=holding->strength;
+            cout<<"You attacked the "<<traverse->name<<" with your "<<holding->name<<"."<<endl;
+            cout<<"It lost "<<holding->strength<<" HP."<<endl;
+            if(traverse->HP<=0)
+            {
+                cout<<"It ded"<<endl;
+                traverse->die();
+            }
+
+            return;
         }
         lastone = traverse;
         traverse = traverse->nextenemy;
         delete[] parseditemname;
     }
+}
+void doinventory(string* words, room inroom)
+{
+
 }
 int checkformove(string* input,room inroom)
 {
@@ -794,6 +812,22 @@ int checkformove(string* input,room inroom)
 
     }
     return 5;
+
+}
+void douses(string* input, room inroom)
+{
+    int i = 0;
+    bool flag = false;
+    while(input[i]!="@")
+    {
+        if(contains(input[i],usewords))
+            flag = true;
+        i++;
+    }
+    if(!flag)
+        return;
+    if(holding!=0)
+        holding->usefunction();
 
 }
 string* words;
@@ -858,6 +892,8 @@ string getString()
         return out;
     }
     doholds(words,*currentroom);
+    doattacks(words,*currentroom);
+    douses(words,*currentroom);
     if((int)s[0]>=48&&(int)s[0]<=52&&currentroom->connectedrooms[(int)s[0]-48]!=0)
     {
         type = 1;
@@ -901,69 +937,6 @@ int main()
 
         }
         while(currentroom->connectedrooms[(int)s[0]-48]==0);*/
-        if(type == 2)
-        {
-            string wordTwo = getSecondWord(s,true);
-            switch((int)s[0])
-            {
-            case 80:
-                break;
-            case 72:
-                if(wordTwo != "@")
-                {
-                    if(inventoryContains(decaps(wordTwo)))
-                    {
-                        inventoryAdd(holding);
-                        holding = inventoryRemove(decaps(wordTwo));
-                        cout<<"You are holding up a/an "<<holding->name<<" with a strength of "<<holding->strength<<endl;
-                    }
-                    else
-                    {
-                        cout<<"Hold what?"<<endl;
-                    }
-                }
-                else
-                {
-                    cout<<"Hold what?"<<endl;
-                }
-
-                break;
-            case 73:
-                printInventory();
-                break;
-            case 85:
-                if(holding!=0)
-                cout<<(holding->usefunction()?"":"I'm afraid I can't let you do that, Dave.")<<endl;
-                break;
-            case 65:
-                if(holding!=0)
-                {
-                    enemy *attacked(getEnemy(wordTwo));
-                    if(attacked!=0)
-                    {
-                        attacked->HP -= holding->strength;
-                        if(holding->strength <= 0)
-                        {
-                            cout<<"You throw the "<<holding->name<<" at "<<attacked->name<<endl;
-                            string s = holding->strength<0?("It gained "+numberToString(holding->strength)+" Health"):"Wow.";
-                            cout<<s<<endl;
-                        }
-                        else if(attacked->HP<=0)
-                        {
-                            attacked->die();
-                        }
-                    }
-                    else
-                    {
-                        cout<<"You lunge at the air, but hit the ground instead."<<endl;
-                    }
-                }
-                else
-                {
-                    cout<< "You don't have anything in your hand"<< endl;
-                }
-            }
-        }
         printNavChoices();
     }
     cout<<(winflag?"You Win":"Game Over")<<endl;
