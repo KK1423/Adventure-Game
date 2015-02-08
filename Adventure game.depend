@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1423231152 source:c:\users\karth_000\skydrive\google drive\adventure game\main.cpp
+	<iostream>
+	<math.h>
+	<stdlib.h>
+	<string>
+

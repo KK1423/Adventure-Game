@@ -1,0 +1,948 @@
+Project title : Adventure game
+Project path  : C:\Users\Karth_000\SkyDrive\Google Drive\Adventure game\
+
+Frame function: main (C:\Users\Karth_000\SkyDrive\Google Drive\Adventure game\main.cpp:557)
+Frame address : 0028FF30
+--------------------------------------------------------------------------------
+0x0046F284	lea    0x4(%esp),%ecx
+0x0046F288	and    $0xfffffff0,%esp
+0x0046F28B	pushl  -0x4(%ecx)
+0x0046F28E	push   %ebp
+0x0046F28F	mov    %esp,%ebp
+0x0046F291	push   %esi
+0x0046F292	push   %ebx
+0x0046F293	push   %ecx
+0x0046F294	sub    $0x9c,%esp
+0x0046F29A	movl   $0x4060a8,-0x74(%ebp)
+0x0046F2A1	movl   $0x470684,-0x70(%ebp)
+0x0046F2A8	lea    -0x18(%ebp),%eax
+0x0046F2AB	mov    %eax,-0x6c(%ebp)
+0x0046F2AE	movl   $0x470088,-0x68(%ebp)
+0x0046F2B5	mov    %esp,-0x64(%ebp)
+0x0046F2B8	lea    -0x8c(%ebp),%edx
+0x0046F2BE	mov    %edx,(%esp)
+0x0046F2C1	call   0x41b468 <_Unwind_SjLj_Register>
+0x0046F2C6	call   0x41aed0 <__main>
+0x0046F2CB	movl   $0xffffffff,-0x88(%ebp)
+0x0046F2D5	call   0x4038b0 <init()>
+0x0046F2DA	mov    0x47c01c,%eax
+0x0046F2DF	mov    %eax,0x47c018
+0x0046F2E4	movl   $0x32,-0x98(%ebp)
+0x0046F2EE	jmp    0x46f31d <main()+153>
+0x0046F2F0	mov    0x27(%eax),%al
+0x0046F2F3	movsbl %al,%eax
+0x0046F2F6	mov    %eax,(%esp)
+0x0046F2F9	movl   $0xffffffff,-0x88(%ebp)
+0x0046F303	mov    $0x47c880,%ecx
+0x0046F308	call   0x44b6d4 <std::ostream::put(char)>
+0x0046F30D	push   %edx
+0x0046F30E	mov    %eax,%ecx
+0x0046F310	call   0x44b8f8 <std::ostream::flush()>
+0x0046F315	decl   -0x98(%ebp)
+0x0046F31B	je     0x46f365 <main()+225>
+0x0046F31D	mov    0x47c880,%eax
+0x0046F322	mov    -0xc(%eax),%eax
+0x0046F325	mov    0x47c8fc(%eax),%eax
+0x0046F32B	mov    %eax,-0x94(%ebp)
+0x0046F331	test   %eax,%eax
+0x0046F333	je     0x47020e <main()+3978>
+0x0046F339	mov    %eax,%ecx
+0x0046F33B	cmpb   $0x0,0x1c(%eax)
+0x0046F33F	jne    0x46f2f0 <main()+108>
+0x0046F341	movl   $0xffffffff,-0x88(%ebp)
+0x0046F34B	call   0x40764c <std::ctype<char>::_M_widen_init() const>
+0x0046F350	mov    -0x94(%ebp),%ecx
+0x0046F356	mov    (%ecx),%eax
+0x0046F358	movl   $0xa,(%esp)
+0x0046F35F	call   *0x18(%eax)
+0x0046F362	push   %ecx
+0x0046F363	jmp    0x46f2f3 <main()+111>
+0x0046F365	mov    0x47c01c,%eax
+0x0046F36A	mov    0x14(%eax),%eax
+0x0046F36D	mov    -0xc(%eax),%edx
+0x0046F370	mov    %edx,0x8(%esp)
+0x0046F374	mov    %eax,0x4(%esp)
+0x0046F378	movl   $0x47c880,(%esp)
+0x0046F37F	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046F384	mov    %eax,(%esp)
+0x0046F387	call   0x46c364 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046F38C	call   0x404cb8 <printNavChoices()>
+0x0046F391	lea    0x0(%esi),%esi
+0x0046F394	fldz
+0x0046F396	flds   0x472000
+0x0046F39C	fucompp
+0x0046F39E	fnstsw %ax
+0x0046F3A0	test   $0x45,%ah
+0x0046F3A3	jne    0x46ffc5 <main()+3393>
+0x0046F3A9	mov    0x47c018,%eax
+0x0046F3AE	movb   $0x1,0x8(%eax)
+0x0046F3B2	lea    -0x51(%ebp),%ebx
+0x0046F3B5	mov    %ebx,0x4(%esp)
+0x0046F3B9	movl   $0x473114,(%esp)
+0x0046F3C0	movl   $0xffffffff,-0x88(%ebp)
+0x0046F3CA	lea    -0x50(%ebp),%ecx
+0x0046F3CD	call   0x44fbb0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)>
+0x0046F3D2	sub    $0x8,%esp
+0x0046F3D5	movl   $0x0,0x47c008
+0x0046F3DF	movl   $0x1,-0x88(%ebp)
+0x0046F3E9	call   0x4057b4 <updateEnemies()>
+0x0046F3EE	lea    -0x4c(%ebp),%esi
+0x0046F3F1	mov    %esi,(%esp)
+0x0046F3F4	call   0x405a28 <getString()>
+0x0046F3F9	mov    %esi,(%esp)
+0x0046F3FC	movl   $0x2,-0x88(%ebp)
+0x0046F406	lea    -0x50(%ebp),%ecx
+0x0046F409	call   0x44e854 <std::string::swap(std::string&)>
+0x0046F40E	push   %eax
+0x0046F40F	mov    -0x4c(%ebp),%edx
+0x0046F412	mov    %edx,-0x94(%ebp)
+0x0046F418	mov    0x482064,%eax
+0x0046F41D	test   %eax,%eax
+0x0046F41F	jne    0x46f6ee <main()+1130>
+0x0046F425	mov    %edx,%ecx
+0x0046F427	mov    -0x4(%edx),%eax
+0x0046F42A	lea    -0x1(%eax),%edx
+0x0046F42D	mov    %edx,-0x4(%ecx)
+0x0046F430	test   %eax,%eax
+0x0046F432	jle    0x46f70b <main()+1159>
+0x0046F438	movl   $0x32,-0x98(%ebp)
+0x0046F442	jmp    0x46f471 <main()+493>
+0x0046F444	mov    0x27(%eax),%al
+0x0046F447	movsbl %al,%eax
+0x0046F44A	mov    %eax,(%esp)
+0x0046F44D	movl   $0x1,-0x88(%ebp)
+0x0046F457	mov    $0x47c880,%ecx
+0x0046F45C	call   0x44b6d4 <std::ostream::put(char)>
+0x0046F461	push   %ebx
+0x0046F462	mov    %eax,%ecx
+0x0046F464	call   0x44b8f8 <std::ostream::flush()>
+0x0046F469	decl   -0x98(%ebp)
+0x0046F46F	je     0x46f4bc <main()+568>
+0x0046F471	mov    0x47c880,%eax
+0x0046F476	mov    -0xc(%eax),%eax
+0x0046F479	mov    0x47c8fc(%eax),%eax
+0x0046F47F	mov    %eax,-0x94(%ebp)
+0x0046F485	test   %eax,%eax
+0x0046F487	je     0x46ffb6 <main()+3378>
+0x0046F48D	mov    %eax,%ecx
+0x0046F48F	cmpb   $0x0,0x1c(%eax)
+0x0046F493	jne    0x46f444 <main()+448>
+0x0046F495	movl   $0x1,-0x88(%ebp)
+0x0046F49F	call   0x40764c <std::ctype<char>::_M_widen_init() const>
+0x0046F4A4	mov    -0x94(%ebp),%ecx
+0x0046F4AA	mov    (%ecx),%eax
+0x0046F4AC	movl   $0xa,(%esp)
+0x0046F4B3	call   *0x18(%eax)
+0x0046F4B6	push   %esi
+0x0046F4B7	jmp    0x46f447 <main()+451>
+0x0046F4B9	lea    0x0(%esi),%esi
+0x0046F4BC	mov    0x47c008,%eax
+0x0046F4C1	cmp    $0x2,%eax
+0x0046F4C4	je     0x46f725 <main()+1185>
+0x0046F4CA	dec    %eax
+0x0046F4CB	je     0x46f51e <main()+666>
+0x0046F4CD	movl   $0x1,-0x88(%ebp)
+0x0046F4D7	call   0x404cb8 <printNavChoices()>
+0x0046F4DC	mov    -0x50(%ebp),%ebx
+0x0046F4DF	mov    %ebx,-0x94(%ebp)
+0x0046F4E5	mov    0x482064,%esi
+0x0046F4EB	test   %esi,%esi
+0x0046F4ED	jne    0x46f6d4 <main()+1104>
+0x0046F4F3	mov    -0x4(%ebx),%eax
+0x0046F4F6	lea    -0x1(%eax),%edx
+0x0046F4F9	mov    %edx,-0x4(%ebx)
+0x0046F4FC	test   %eax,%eax
+0x0046F4FE	jg     0x46f394 <main()+272>
+0x0046F504	mov    -0x94(%ebp),%ecx
+0x0046F50A	sub    $0xc,%ecx
+0x0046F50D	lea    -0x51(%ebp),%eax
+0x0046F510	mov    %eax,(%esp)
+0x0046F513	call   0x44e5c8 <std::string::_Rep::_M_destroy(std::allocator<char> const&)>
+0x0046F518	push   %ebx
+0x0046F519	jmp    0x46f394 <main()+272>
+0x0046F51E	mov    0x47c018,%esi
+0x0046F524	mov    %esi,-0x94(%ebp)
+0x0046F52A	mov    -0x50(%ebp),%eax
+0x0046F52D	mov    -0x4(%eax),%edx
+0x0046F530	test   %edx,%edx
+0x0046F532	js     0x46fc9f <main()+2587>
+0x0046F538	movl   $0x1,-0x88(%ebp)
+0x0046F542	lea    -0x50(%ebp),%ecx
+0x0046F545	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046F54A	mov    -0x50(%ebp),%eax
+0x0046F54D	movsbl (%eax),%edx
+0x0046F550	sub    $0x2c,%edx
+0x0046F553	mov    0xc(%esi,%edx,4),%ecx
+0x0046F557	mov    0x2c(%ecx),%ecx
+0x0046F55A	mov    %ecx,-0x94(%ebp)
+0x0046F560	mov    0x47c018,%ecx
+0x0046F566	mov    %ecx,-0x98(%ebp)
+0x0046F56C	mov    -0x4(%eax),%eax
+0x0046F56F	test   %eax,%eax
+0x0046F571	js     0x4701b9 <main()+3893>
+0x0046F577	movl   $0x1,-0x88(%ebp)
+0x0046F581	lea    -0x50(%ebp),%ecx
+0x0046F584	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046F589	mov    -0x50(%ebp),%eax
+0x0046F58C	movsbl (%eax),%eax
+0x0046F58F	mov    -0x98(%ebp),%ebx
+0x0046F595	mov    -0xa4(%ebx,%eax,4),%eax
+0x0046F59C	mov    -0x94(%ebp),%esi
+0x0046F5A2	mov    %eax,(%esp)
+0x0046F5A5	movl   $0x1,-0x88(%ebp)
+0x0046F5AF	call   *%esi
+0x0046F5B1	test   %al,%al
+0x0046F5B3	je     0x46fcb9 <main()+2613>
+0x0046F5B9	mov    -0x50(%ebp),%edx
+0x0046F5BC	mov    0x47c018,%ebx
+0x0046F5C2	mov    %ebx,-0x94(%ebp)
+0x0046F5C8	mov    -0x4(%edx),%ecx
+0x0046F5CB	test   %ecx,%ecx
+0x0046F5CD	js     0x46f5e4 <main()+864>
+0x0046F5CF	movl   $0x1,-0x88(%ebp)
+0x0046F5D9	lea    -0x50(%ebp),%ecx
+0x0046F5DC	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046F5E1	mov    -0x50(%ebp),%edx
+0x0046F5E4	movsbl (%edx),%eax
+0x0046F5E7	mov    -0x94(%ebp),%edx
+0x0046F5ED	mov    -0xa4(%edx,%eax,4),%eax
+0x0046F5F4	mov    %eax,-0x94(%ebp)
+0x0046F5FA	mov    %eax,0x47c018
+0x0046F5FF	cmpb   $0x0,0x8(%eax)
+0x0046F603	jne    0x46fe67 <main()+3043>
+0x0046F609	mov    0x14(%eax),%eax
+0x0046F60C	mov    -0xc(%eax),%edx
+0x0046F60F	mov    %edx,0x8(%esp)
+0x0046F613	mov    %eax,0x4(%esp)
+0x0046F617	movl   $0x47c880,(%esp)
+0x0046F61E	movl   $0x1,-0x88(%ebp)
+0x0046F628	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046F62D	mov    %eax,-0x98(%ebp)
+0x0046F633	mov    %eax,%ebx
+0x0046F635	mov    (%eax),%eax
+0x0046F637	mov    -0xc(%eax),%eax
+0x0046F63A	mov    0x7c(%ebx,%eax,1),%eax
+0x0046F63E	mov    %eax,-0x94(%ebp)
+0x0046F644	test   %eax,%eax
+0x0046F646	je     0x4701c8 <main()+3908>
+0x0046F64C	mov    %eax,%ecx
+0x0046F64E	cmpb   $0x0,0x1c(%eax)
+0x0046F652	je     0x46ff68 <main()+3300>
+0x0046F658	mov    0x27(%eax),%al
+0x0046F65B	movsbl %al,%eax
+0x0046F65E	mov    %eax,(%esp)
+0x0046F661	movl   $0x1,-0x88(%ebp)
+0x0046F66B	mov    -0x98(%ebp),%ecx
+0x0046F671	call   0x44b6d4 <std::ostream::put(char)>
+0x0046F676	push   %ecx
+0x0046F677	mov    %eax,%ecx
+0x0046F679	call   0x44b8f8 <std::ostream::flush()>
+0x0046F67E	mov    %eax,-0x98(%ebp)
+0x0046F684	mov    %eax,%ebx
+0x0046F686	mov    (%eax),%eax
+0x0046F688	mov    -0xc(%eax),%eax
+0x0046F68B	mov    0x7c(%ebx,%eax,1),%eax
+0x0046F68F	mov    %eax,-0x94(%ebp)
+0x0046F695	test   %eax,%eax
+0x0046F697	je     0x4701cd <main()+3913>
+0x0046F69D	mov    %eax,%ecx
+0x0046F69F	cmpb   $0x0,0x1c(%eax)
+0x0046F6A3	je     0x46fdd0 <main()+2892>
+0x0046F6A9	mov    0x27(%eax),%al
+0x0046F6AC	movsbl %al,%eax
+0x0046F6AF	mov    %eax,(%esp)
+0x0046F6B2	movl   $0x1,-0x88(%ebp)
+0x0046F6BC	mov    -0x98(%ebp),%ecx
+0x0046F6C2	call   0x44b6d4 <std::ostream::put(char)>
+0x0046F6C7	push   %edx
+0x0046F6C8	mov    %eax,%ecx
+0x0046F6CA	call   0x44b8f8 <std::ostream::flush()>
+0x0046F6CF	jmp    0x46f4cd <main()+585>
+0x0046F6D4	movl   $0xffffffff,0x4(%esp)
+0x0046F6DC	mov    %ebx,%eax
+0x0046F6DE	sub    $0x4,%eax
+0x0046F6E1	mov    %eax,(%esp)
+0x0046F6E4	call   0x408628 <__gnu_cxx::__exchange_and_add(int volatile*, int)>
+0x0046F6E9	jmp    0x46f4fc <main()+632>
+0x0046F6EE	movl   $0xffffffff,0x4(%esp)
+0x0046F6F6	mov    %edx,%eax
+0x0046F6F8	sub    $0x4,%eax
+0x0046F6FB	mov    %eax,(%esp)
+0x0046F6FE	call   0x408628 <__gnu_cxx::__exchange_and_add(int volatile*, int)>
+0x0046F703	test   %eax,%eax
+0x0046F705	jg     0x46f438 <main()+436>
+0x0046F70B	mov    -0x94(%ebp),%ecx
+0x0046F711	sub    $0xc,%ecx
+0x0046F714	lea    -0x51(%ebp),%ebx
+0x0046F717	mov    %ebx,(%esp)
+0x0046F71A	call   0x44e5c8 <std::string::_Rep::_M_destroy(std::allocator<char> const&)>
+0x0046F71F	push   %eax
+0x0046F720	jmp    0x46f438 <main()+436>
+0x0046F725	lea    -0x50(%ebp),%ebx
+0x0046F728	mov    %ebx,(%esp)
+0x0046F72B	lea    -0x48(%ebp),%ecx
+0x0046F72E	call   0x44fc5c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)>
+0x0046F733	push   %ecx
+0x0046F734	mov    -0x48(%ebp),%eax
+0x0046F737	movl   $0x0,-0x94(%ebp)
+0x0046F741	jmp    0x46f753 <main()+1231>
+0x0046F743	nop
+0x0046F744	cmp    %edx,-0xc(%eax)
+0x0046F747	je     0x46fed4 <main()+3152>
+0x0046F74D	incl   -0x94(%ebp)
+0x0046F753	mov    -0x4(%eax),%edx
+0x0046F756	test   %edx,%edx
+0x0046F758	js     0x46f76f <main()+1259>
+0x0046F75A	movl   $0x3,-0x88(%ebp)
+0x0046F764	lea    -0x48(%ebp),%ecx
+0x0046F767	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046F76C	mov    -0x48(%ebp),%eax
+0x0046F76F	mov    -0x94(%ebp),%edx
+0x0046F775	cmpb   $0x20,(%eax,%edx,1)
+0x0046F779	jne    0x46f744 <main()+1216>
+0x0046F77B	inc    %edx
+0x0046F77C	cmp    -0xc(%eax),%edx
+0x0046F77F	ja     0x4701d2 <main()+3918>
+0x0046F785	movl   $0xffffffff,0x8(%esp)
+0x0046F78D	mov    %edx,0x4(%esp)
+0x0046F791	lea    -0x48(%ebp),%ecx
+0x0046F794	mov    %ecx,(%esp)
+0x0046F797	movl   $0x3,-0x88(%ebp)
+0x0046F7A1	lea    -0x4c(%ebp),%ecx
+0x0046F7A4	call   0x44fcd0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&, unsigned int, unsigned int)>
+0x0046F7A9	sub    $0xc,%esp
+0x0046F7AC	mov    -0x48(%ebp),%ebx
+0x0046F7AF	mov    %ebx,-0x94(%ebp)
+0x0046F7B5	mov    0x482064,%esi
+0x0046F7BB	test   %esi,%esi
+0x0046F7BD	jne    0x46ff31 <main()+3245>
+0x0046F7C3	mov    -0x4(%ebx),%eax
+0x0046F7C6	lea    -0x1(%eax),%edx
+0x0046F7C9	mov    %edx,-0x4(%ebx)
+0x0046F7CC	test   %eax,%eax
+0x0046F7CE	jle    0x46ff4e <main()+3274>
+0x0046F7D4	mov    -0x50(%ebp),%eax
+0x0046F7D7	mov    -0x4(%eax),%edx
+0x0046F7DA	test   %edx,%edx
+0x0046F7DC	js     0x46f7f3 <main()+1391>
+0x0046F7DE	movl   $0x4,-0x88(%ebp)
+0x0046F7E8	lea    -0x50(%ebp),%ecx
+0x0046F7EB	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046F7F0	mov    -0x50(%ebp),%eax
+0x0046F7F3	mov    (%eax),%al
+0x0046F7F5	sub    $0x41,%eax
+0x0046F7F8	cmp    $0x14,%al
+0x0046F7FA	ja     0x46f953 <main()+1743>
+0x0046F800	movzbl %al,%eax
+0x0046F803	jmp    *0x47354c(,%eax,4)
+0x0046F80A	cmpl   $0x0,0x47c010
+0x0046F811	je     0x470072 <main()+3566>
+0x0046F817	lea    -0x4c(%ebp),%ecx
+0x0046F81A	mov    %ecx,(%esp)
+0x0046F81D	movl   $0x4,-0x88(%ebp)
+0x0046F827	lea    -0x24(%ebp),%ecx
+0x0046F82A	call   0x44fc5c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)>
+0x0046F82F	push   %ecx
+0x0046F830	lea    -0x24(%ebp),%ebx
+0x0046F833	mov    %ebx,(%esp)
+0x0046F836	movl   $0xd,-0x88(%ebp)
+0x0046F840	call   0x401bdc <getEnemy(std::string)>
+0x0046F845	mov    %eax,-0x94(%ebp)
+0x0046F84B	mov    %ebx,%ecx
+0x0046F84D	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046F852	cmpl   $0x0,-0x94(%ebp)
+0x0046F859	je     0x47022e <main()+4010>
+0x0046F85F	mov    0x47c010,%edx
+0x0046F865	flds   0x4(%edx)
+0x0046F868	mov    -0x94(%ebp),%eax
+0x0046F86E	flds   0x4(%eax)
+0x0046F871	fsub   %st(1),%st
+0x0046F873	fsts   0x4(%eax)
+0x0046F876	fldz
+0x0046F878	fucom  %st(2)
+0x0046F87A	fnstsw %ax
+0x0046F87C	fstp   %st(2)
+0x0046F87E	test   $0x5,%ah
+0x0046F881	jne    0x47001c <main()+3480>
+0x0046F887	fstp   %st(0)
+0x0046F889	fstp   %st(0)
+0x0046F88B	add    $0xc,%edx
+0x0046F88E	mov    %edx,-0x98(%ebp)
+0x0046F894	movl   $0x4,-0x88(%ebp)
+0x0046F89E	mov    $0x473485,%eax
+0x0046F8A3	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046F8A8	mov    -0x98(%ebp),%edx
+0x0046F8AE	mov    %edx,0x4(%esp)
+0x0046F8B2	mov    %eax,(%esp)
+0x0046F8B5	call   0x46d944 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+0x0046F8BA	movl   $0x473494,0x4(%esp)
+0x0046F8C2	mov    %eax,(%esp)
+0x0046F8C5	call   0x46d708 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)>
+0x0046F8CA	mov    -0x94(%ebp),%ecx
+0x0046F8D0	mov    %ecx,0x4(%esp)
+0x0046F8D4	mov    %eax,(%esp)
+0x0046F8D7	call   0x46d944 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+0x0046F8DC	mov    %eax,(%esp)
+0x0046F8DF	call   0x46c364 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046F8E4	mov    0x47c010,%eax
+0x0046F8E9	flds   0x4(%eax)
+0x0046F8EC	fldz
+0x0046F8EE	fucomp %st(1)
+0x0046F8F0	fnstsw %ax
+0x0046F8F2	test   $0x45,%ah
+0x0046F8F5	je     0x4700af <main()+3627>
+0x0046F8FB	fstp   %st(0)
+0x0046F8FD	lea    -0x51(%ebp),%esi
+0x0046F900	mov    %esi,0x4(%esp)
+0x0046F904	movl   $0x4734ac,(%esp)
+0x0046F90B	movl   $0xe,-0x88(%ebp)
+0x0046F915	lea    -0x24(%ebp),%ecx
+0x0046F918	call   0x44fbb0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)>
+0x0046F91D	push   %esi
+0x0046F91E	push   %esi
+0x0046F91F	mov    -0x24(%ebp),%eax
+0x0046F922	mov    -0xc(%eax),%edx
+0x0046F925	mov    %edx,0x8(%esp)
+0x0046F929	mov    %eax,0x4(%esp)
+0x0046F92D	movl   $0x47c880,(%esp)
+0x0046F934	movl   $0xf,-0x88(%ebp)
+0x0046F93E	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046F943	mov    %eax,(%esp)
+0x0046F946	call   0x46c364 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046F94B	lea    -0x24(%ebp),%ecx
+0x0046F94E	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046F953	mov    -0x4c(%ebp),%eax
+0x0046F956	mov    %eax,-0x94(%ebp)
+0x0046F95C	mov    0x482064,%ebx
+0x0046F962	test   %ebx,%ebx
+0x0046F964	jne    0x46fefc <main()+3192>
+0x0046F96A	mov    %eax,%ecx
+0x0046F96C	mov    -0x4(%eax),%eax
+0x0046F96F	lea    -0x1(%eax),%edx
+0x0046F972	mov    %edx,-0x4(%ecx)
+0x0046F975	test   %eax,%eax
+0x0046F977	jle    0x46ff17 <main()+3219>
+0x0046F97D	mov    0x47c008,%eax
+0x0046F982	jmp    0x46f4ca <main()+582>
+0x0046F987	cmpl   $0x0,0x47c010
+0x0046F98E	je     0x46f953 <main()+1743>
+0x0046F990	movl   $0x4,-0x88(%ebp)
+0x0046F99A	lea    -0x4c(%ebp),%ecx
+0x0046F99D	call   0x44f2cc <std::string::_M_leak()>
+0x0046F9A2	mov    -0x4c(%ebp),%eax
+0x0046F9A5	mov    %eax,-0x94(%ebp)
+0x0046F9AB	mov    0x47c010,%eax
+0x0046F9B0	call   *0x8(%eax)
+0x0046F9B3	mov    -0x94(%ebp),%edx
+0x0046F9B9	mov    %al,(%edx)
+0x0046F9BB	jmp    0x46f953 <main()+1743>
+0x0046F9BD	movl   $0x473114,(%esp)
+0x0046F9C4	movl   $0x4,-0x88(%ebp)
+0x0046F9CE	lea    -0x4c(%ebp),%ecx
+0x0046F9D1	call   0x4272dc <std::string::compare(char const*) const>
+0x0046F9D6	push   %esi
+0x0046F9D7	test   %eax,%eax
+0x0046F9D9	je     0x47003b <main()+3511>
+0x0046F9DF	lea    -0x4c(%ebp),%edx
+0x0046F9E2	mov    %edx,(%esp)
+0x0046F9E5	lea    -0x44(%ebp),%ecx
+0x0046F9E8	call   0x44fc5c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)>
+0x0046F9ED	push   %ebx
+0x0046F9EE	lea    -0x44(%ebp),%ecx
+0x0046F9F1	mov    %ecx,0x4(%esp)
+0x0046F9F5	lea    -0x40(%ebp),%ebx
+0x0046F9F8	mov    %ebx,(%esp)
+0x0046F9FB	movl   $0x5,-0x88(%ebp)
+0x0046FA05	call   0x4017a0 <decaps(std::string)>
+0x0046FA0A	mov    %ebx,(%esp)
+0x0046FA0D	movl   $0x6,-0x88(%ebp)
+0x0046FA17	call   0x4033e0 <roomContains(std::string)>
+0x0046FA1C	mov    %al,-0x94(%ebp)
+0x0046FA22	mov    %ebx,%ecx
+0x0046FA24	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FA29	lea    -0x44(%ebp),%ecx
+0x0046FA2C	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FA31	cmpb   $0x0,-0x94(%ebp)
+0x0046FA38	je     0x47003b <main()+3511>
+0x0046FA3E	lea    -0x4c(%ebp),%eax
+0x0046FA41	mov    %eax,(%esp)
+0x0046FA44	movl   $0x4,-0x88(%ebp)
+0x0046FA4E	lea    -0x3c(%ebp),%ecx
+0x0046FA51	call   0x44fc5c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)>
+0x0046FA56	push   %ecx
+0x0046FA57	lea    -0x3c(%ebp),%edx
+0x0046FA5A	mov    %edx,0x4(%esp)
+0x0046FA5E	lea    -0x38(%ebp),%ecx
+0x0046FA61	mov    %ecx,(%esp)
+0x0046FA64	movl   $0x7,-0x88(%ebp)
+0x0046FA6E	call   0x4017a0 <decaps(std::string)>
+0x0046FA73	lea    -0x38(%ebp),%ebx
+0x0046FA76	mov    %ebx,(%esp)
+0x0046FA79	movl   $0x8,-0x88(%ebp)
+0x0046FA83	call   0x402e30 <roomRemove(std::string)>
+0x0046FA88	mov    %eax,-0x94(%ebp)
+0x0046FA8E	mov    %ebx,%ecx
+0x0046FA90	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FA95	lea    -0x3c(%ebp),%ecx
+0x0046FA98	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FA9D	mov    0x47c014,%eax
+0x0046FAA2	test   %eax,%eax
+0x0046FAA4	jne    0x46faae <main()+2090>
+0x0046FAA6	jmp    0x470247 <main()+4035>
+0x0046FAAB	nop
+0x0046FAAC	mov    %edx,%eax
+0x0046FAAE	mov    (%eax),%edx
+0x0046FAB0	test   %edx,%edx
+0x0046FAB2	jne    0x46faac <main()+2088>
+0x0046FAB4	mov    -0x94(%ebp),%edx
+0x0046FABA	mov    %edx,(%eax)
+0x0046FABC	mov    -0x94(%ebp),%eax
+0x0046FAC2	flds   0x4(%eax)
+0x0046FAC5	fstps  -0x98(%ebp)
+0x0046FACB	add    $0xc,%eax
+0x0046FACE	mov    %eax,-0x94(%ebp)
+0x0046FAD4	movl   $0x4,-0x88(%ebp)
+0x0046FADE	mov    $0x47342a,%eax
+0x0046FAE3	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046FAE8	mov    -0x94(%ebp),%edx
+0x0046FAEE	mov    %edx,0x4(%esp)
+0x0046FAF2	mov    %eax,(%esp)
+0x0046FAF5	call   0x46d944 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+0x0046FAFA	movl   $0x47343e,0x4(%esp)
+0x0046FB02	mov    %eax,(%esp)
+0x0046FB05	call   0x46d708 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)>
+0x0046FB0A	flds   -0x98(%ebp)
+0x0046FB10	fstps  (%esp)
+0x0046FB13	mov    %eax,%ecx
+0x0046FB15	call   0x44e014 <std::ostream::operator<<(float)>
+0x0046FB1A	push   %ebx
+0x0046FB1B	mov    %eax,(%esp)
+0x0046FB1E	call   0x46c364 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046FB23	jmp    0x46f953 <main()+1743>
+0x0046FB28	movl   $0x4,-0x88(%ebp)
+0x0046FB32	call   0x4054c8 <printInventory()>
+0x0046FB37	jmp    0x46f953 <main()+1743>
+0x0046FB3C	movl   $0x473114,(%esp)
+0x0046FB43	movl   $0x4,-0x88(%ebp)
+0x0046FB4D	lea    -0x4c(%ebp),%ecx
+0x0046FB50	call   0x4272dc <std::string::compare(char const*) const>
+0x0046FB55	push   %edx
+0x0046FB56	test   %eax,%eax
+0x0046FB58	je     0x47005c <main()+3544>
+0x0046FB5E	lea    -0x4c(%ebp),%eax
+0x0046FB61	mov    %eax,(%esp)
+0x0046FB64	lea    -0x34(%ebp),%ecx
+0x0046FB67	call   0x44fc5c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)>
+0x0046FB6C	push   %eax
+0x0046FB6D	lea    -0x34(%ebp),%edx
+0x0046FB70	mov    %edx,0x4(%esp)
+0x0046FB74	lea    -0x30(%ebp),%ecx
+0x0046FB77	mov    %ecx,(%esp)
+0x0046FB7A	movl   $0x9,-0x88(%ebp)
+0x0046FB84	call   0x4017a0 <decaps(std::string)>
+0x0046FB89	lea    -0x30(%ebp),%ebx
+0x0046FB8C	mov    %ebx,(%esp)
+0x0046FB8F	movl   $0xa,-0x88(%ebp)
+0x0046FB99	call   0x4024a8 <inventoryContains(std::string)>
+0x0046FB9E	mov    %al,-0x94(%ebp)
+0x0046FBA4	mov    %ebx,%ecx
+0x0046FBA6	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FBAB	lea    -0x34(%ebp),%ecx
+0x0046FBAE	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FBB3	cmpb   $0x0,-0x94(%ebp)
+0x0046FBBA	je     0x47005c <main()+3544>
+0x0046FBC0	mov    0x47c010,%edx
+0x0046FBC6	mov    0x47c014,%eax
+0x0046FBCB	test   %eax,%eax
+0x0046FBCD	jne    0x46fbd6 <main()+2386>
+0x0046FBCF	jmp    0x4700a4 <main()+3616>
+0x0046FBD4	mov    %ecx,%eax
+0x0046FBD6	mov    (%eax),%ecx
+0x0046FBD8	test   %ecx,%ecx
+0x0046FBDA	jne    0x46fbd4 <main()+2384>
+0x0046FBDC	mov    %edx,(%eax)
+0x0046FBDE	lea    -0x4c(%ebp),%esi
+0x0046FBE1	mov    %esi,(%esp)
+0x0046FBE4	movl   $0x4,-0x88(%ebp)
+0x0046FBEE	lea    -0x2c(%ebp),%ecx
+0x0046FBF1	call   0x44fc5c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)>
+0x0046FBF6	push   %esi
+0x0046FBF7	lea    -0x2c(%ebp),%eax
+0x0046FBFA	mov    %eax,0x4(%esp)
+0x0046FBFE	lea    -0x28(%ebp),%edx
+0x0046FC01	mov    %edx,(%esp)
+0x0046FC04	movl   $0xb,-0x88(%ebp)
+0x0046FC0E	call   0x4017a0 <decaps(std::string)>
+0x0046FC13	lea    -0x28(%ebp),%ecx
+0x0046FC16	mov    %ecx,(%esp)
+0x0046FC19	movl   $0xc,-0x88(%ebp)
+0x0046FC23	call   0x401f00 <inventoryRemove(std::string)>
+0x0046FC28	mov    %eax,0x47c010
+0x0046FC2D	lea    -0x28(%ebp),%ecx
+0x0046FC30	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FC35	lea    -0x2c(%ebp),%ecx
+0x0046FC38	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0046FC3D	mov    0x47c010,%eax
+0x0046FC42	flds   0x4(%eax)
+0x0046FC45	fstps  -0x94(%ebp)
+0x0046FC4B	add    $0xc,%eax
+0x0046FC4E	mov    %eax,-0x98(%ebp)
+0x0046FC54	movl   $0x4,-0x88(%ebp)
+0x0046FC5E	mov    $0x473461,%eax
+0x0046FC63	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046FC68	mov    -0x98(%ebp),%edx
+0x0046FC6E	mov    %edx,0x4(%esp)
+0x0046FC72	mov    %eax,(%esp)
+0x0046FC75	call   0x46d944 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+0x0046FC7A	movl   $0x47343e,0x4(%esp)
+0x0046FC82	mov    %eax,(%esp)
+0x0046FC85	call   0x46d708 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)>
+0x0046FC8A	flds   -0x94(%ebp)
+0x0046FC90	fstps  (%esp)
+0x0046FC93	mov    %eax,%ecx
+0x0046FC95	call   0x44e014 <std::ostream::operator<<(float)>
+0x0046FC9A	jmp    0x46fb1a <main()+2198>
+0x0046FC9F	movsbl (%eax),%eax
+0x0046FCA2	mov    -0xa4(%esi,%eax,4),%eax
+0x0046FCA9	mov    0x2c(%eax),%edx
+0x0046FCAC	mov    %edx,-0x94(%ebp)
+0x0046FCB2	mov    %edx,%esi
+0x0046FCB4	jmp    0x46f5a2 <main()+798>
+0x0046FCB9	mov    0x47c018,%eax
+0x0046FCBE	mov    %eax,-0x98(%ebp)
+0x0046FCC4	mov    -0x50(%ebp),%eax
+0x0046FCC7	mov    %eax,%edx
+0x0046FCC9	mov    -0x4(%eax),%esi
+0x0046FCCC	test   %esi,%esi
+0x0046FCCE	js     0x4701ed <main()+3945>
+0x0046FCD4	lea    -0x50(%ebp),%ecx
+0x0046FCD7	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046FCDC	mov    0x47c018,%edx
+0x0046FCE2	mov    %edx,-0x94(%ebp)
+0x0046FCE8	mov    -0x50(%ebp),%eax
+0x0046FCEB	mov    %eax,%edx
+0x0046FCED	mov    -0x4(%eax),%ecx
+0x0046FCF0	movsbl (%eax),%ebx
+0x0046FCF3	mov    -0x98(%ebp),%esi
+0x0046FCF9	mov    -0xa4(%esi,%ebx,4),%ebx
+0x0046FD00	cmpb   $0x0,0x8(%ebx)
+0x0046FD04	jne    0x46f5cb <main()+839>
+0x0046FD0A	test   %ecx,%ecx
+0x0046FD0C	js     0x46fd23 <main()+2719>
+0x0046FD0E	movl   $0x1,-0x88(%ebp)
+0x0046FD18	lea    -0x50(%ebp),%ecx
+0x0046FD1B	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046FD20	mov    -0x50(%ebp),%eax
+0x0046FD23	mov    -0x94(%ebp),%ebx
+0x0046FD29	movsbl (%eax),%eax
+0x0046FD2C	mov    -0xa4(%ebx,%eax,4),%ecx
+0x0046FD33	add    $0x18,%ecx
+0x0046FD36	movl   $0x473114,(%esp)
+0x0046FD3D	movl   $0x1,-0x88(%ebp)
+0x0046FD47	call   0x4272dc <std::string::compare(char const*) const>
+0x0046FD4C	push   %edx
+0x0046FD4D	test   %eax,%eax
+0x0046FD4F	je     0x46fdf7 <main()+2931>
+0x0046FD55	mov    0x47c018,%esi
+0x0046FD5B	mov    %esi,-0x94(%ebp)
+0x0046FD61	mov    -0x50(%ebp),%eax
+0x0046FD64	mov    -0x4(%eax),%esi
+0x0046FD67	test   %esi,%esi
+0x0046FD69	js     0x46fd76 <main()+2802>
+0x0046FD6B	lea    -0x50(%ebp),%ecx
+0x0046FD6E	call   0x44e0c0 <std::string::_M_leak_hard()>
+0x0046FD73	mov    -0x50(%ebp),%eax
+0x0046FD76	movsbl (%eax),%eax
+0x0046FD79	mov    -0x94(%ebp),%edx
+0x0046FD7F	mov    -0xa4(%edx,%eax,4),%eax
+0x0046FD86	mov    0x18(%eax),%eax
+0x0046FD89	mov    -0xc(%eax),%edx
+0x0046FD8C	mov    %edx,0x8(%esp)
+0x0046FD90	mov    %eax,0x4(%esp)
+0x0046FD94	movl   $0x47c880,(%esp)
+0x0046FD9B	movl   $0x1,-0x88(%ebp)
+0x0046FDA5	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046FDAA	mov    %eax,-0x98(%ebp)
+0x0046FDB0	mov    %eax,%ecx
+0x0046FDB2	mov    (%eax),%eax
+0x0046FDB4	mov    -0xc(%eax),%eax
+0x0046FDB7	mov    0x7c(%ecx,%eax,1),%eax
+0x0046FDBB	mov    %eax,-0x94(%ebp)
+0x0046FDC1	test   %eax,%eax
+0x0046FDC3	jne    0x46f69d <main()+1049>
+0x0046FDC9	call   0x407914 <std::__throw_bad_cast()>
+0x0046FDCE	xchg   %ax,%ax
+0x0046FDD0	movl   $0x1,-0x88(%ebp)
+0x0046FDDA	call   0x40764c <std::ctype<char>::_M_widen_init() const>
+0x0046FDDF	mov    -0x94(%ebp),%ecx
+0x0046FDE5	mov    (%ecx),%eax
+0x0046FDE7	movl   $0xa,(%esp)
+0x0046FDEE	call   *0x18(%eax)
+0x0046FDF1	push   %ebx
+0x0046FDF2	jmp    0x46f6ac <main()+1064>
+0x0046FDF7	movl   $0x27,0x8(%esp)
+0x0046FDFF	movl   $0x473524,0x4(%esp)
+0x0046FE07	movl   $0x47c880,(%esp)
+0x0046FE0E	movl   $0x1,-0x88(%ebp)
+0x0046FE18	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046FE1D	mov    0x47c880,%eax
+0x0046FE22	mov    -0xc(%eax),%eax
+0x0046FE25	mov    0x47c8fc(%eax),%eax
+0x0046FE2B	mov    %eax,-0x94(%ebp)
+0x0046FE31	test   %eax,%eax
+0x0046FE33	je     0x4701e8 <main()+3940>
+0x0046FE39	mov    %eax,%ecx
+0x0046FE3B	cmpb   $0x0,0x1c(%eax)
+0x0046FE3F	je     0x46ff8f <main()+3339>
+0x0046FE45	mov    0x27(%eax),%al
+0x0046FE48	movsbl %al,%eax
+0x0046FE4B	mov    %eax,(%esp)
+0x0046FE4E	movl   $0x1,-0x88(%ebp)
+0x0046FE58	mov    $0x47c880,%ecx
+0x0046FE5D	call   0x44b6d4 <std::ostream::put(char)>
+0x0046FE62	jmp    0x46f6c7 <main()+1091>
+0x0046FE67	movl   $0x15,0x8(%esp)
+0x0046FE6F	movl   $0x47350d,0x4(%esp)
+0x0046FE77	movl   $0x47c880,(%esp)
+0x0046FE7E	movl   $0x1,-0x88(%ebp)
+0x0046FE88	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046FE8D	mov    -0x94(%ebp),%ebx
+0x0046FE93	mov    0xc(%ebx),%eax
+0x0046FE96	mov    -0xc(%eax),%edx
+0x0046FE99	mov    %edx,0x8(%esp)
+0x0046FE9D	mov    %eax,0x4(%esp)
+0x0046FEA1	movl   $0x47c880,(%esp)
+0x0046FEA8	call   0x46b4e0 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)>
+0x0046FEAD	mov    %eax,-0x98(%ebp)
+0x0046FEB3	mov    %eax,%esi
+0x0046FEB5	mov    (%eax),%eax
+0x0046FEB7	mov    -0xc(%eax),%eax
+0x0046FEBA	mov    0x7c(%esi,%eax,1),%eax
+0x0046FEBE	mov    %eax,-0x94(%ebp)
+0x0046FEC4	test   %eax,%eax
+0x0046FEC6	jne    0x46f69d <main()+1049>
+0x0046FECC	call   0x407914 <std::__throw_bad_cast()>
+0x0046FED1	lea    0x0(%esi),%esi
+0x0046FED4	lea    -0x51(%ebp),%eax
+0x0046FED7	mov    %eax,0x4(%esp)
+0x0046FEDB	movl   $0x473114,(%esp)
+0x0046FEE2	movl   $0x3,-0x88(%ebp)
+0x0046FEEC	lea    -0x4c(%ebp),%ecx
+0x0046FEEF	call   0x44fbb0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)>
+0x0046FEF4	sub    $0x8,%esp
+0x0046FEF7	jmp    0x46f7ac <main()+1320>
+0x0046FEFC	movl   $0xffffffff,0x4(%esp)
+0x0046FF04	sub    $0x4,%eax
+0x0046FF07	mov    %eax,(%esp)
+0x0046FF0A	call   0x408628 <__gnu_cxx::__exchange_and_add(int volatile*, int)>
+0x0046FF0F	test   %eax,%eax
+0x0046FF11	jg     0x46f97d <main()+1785>
+0x0046FF17	mov    -0x94(%ebp),%ecx
+0x0046FF1D	sub    $0xc,%ecx
+0x0046FF20	lea    -0x51(%ebp),%ebx
+0x0046FF23	mov    %ebx,(%esp)
+0x0046FF26	call   0x44e5c8 <std::string::_Rep::_M_destroy(std::allocator<char> const&)>
+0x0046FF2B	push   %ecx
+0x0046FF2C	jmp    0x46f97d <main()+1785>
+0x0046FF31	movl   $0xffffffff,0x4(%esp)
+0x0046FF39	mov    %ebx,%eax
+0x0046FF3B	sub    $0x4,%eax
+0x0046FF3E	mov    %eax,(%esp)
+0x0046FF41	call   0x408628 <__gnu_cxx::__exchange_and_add(int volatile*, int)>
+0x0046FF46	test   %eax,%eax
+0x0046FF48	jg     0x46f7d4 <main()+1360>
+0x0046FF4E	mov    -0x94(%ebp),%ecx
+0x0046FF54	sub    $0xc,%ecx
+0x0046FF57	lea    -0x51(%ebp),%eax
+0x0046FF5A	mov    %eax,(%esp)
+0x0046FF5D	call   0x44e5c8 <std::string::_Rep::_M_destroy(std::allocator<char> const&)>
+0x0046FF62	push   %ecx
+0x0046FF63	jmp    0x46f7d4 <main()+1360>
+0x0046FF68	movl   $0x1,-0x88(%ebp)
+0x0046FF72	call   0x40764c <std::ctype<char>::_M_widen_init() const>
+0x0046FF77	mov    -0x94(%ebp),%ecx
+0x0046FF7D	mov    (%ecx),%eax
+0x0046FF7F	movl   $0xa,(%esp)
+0x0046FF86	call   *0x18(%eax)
+0x0046FF89	push   %ebx
+0x0046FF8A	jmp    0x46f65b <main()+983>
+0x0046FF8F	movl   $0x1,-0x88(%ebp)
+0x0046FF99	call   0x40764c <std::ctype<char>::_M_widen_init() const>
+0x0046FF9E	mov    -0x94(%ebp),%ecx
+0x0046FFA4	mov    (%ecx),%eax
+0x0046FFA6	movl   $0xa,(%esp)
+0x0046FFAD	call   *0x18(%eax)
+0x0046FFB0	push   %ecx
+0x0046FFB1	jmp    0x46fe48 <main()+3012>
+0x0046FFB6	movl   $0x1,-0x88(%ebp)
+0x0046FFC0	call   0x407914 <std::__throw_bad_cast()>
+0x0046FFC5	mov    $0x473418,%eax
+0x0046FFCA	cmpb   $0x0,0x47c00c
+0x0046FFD1	jne    0x46ffd8 <main()+3412>
+0x0046FFD3	mov    $0x473420,%eax
+0x0046FFD8	movl   $0xffffffff,-0x88(%ebp)
+0x0046FFE2	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046FFE7	mov    %eax,(%esp)
+0x0046FFEA	call   0x46c364 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)>
+0x0046FFEF	movl   $0x472000,(%esp)
+0x0046FFF6	mov    $0x47c920,%ecx
+0x0046FFFB	call   0x44b24c <std::istream::operator>>(float&)>
+0x00470000	push   %ecx
+0x00470001	lea    -0x8c(%ebp),%esi
+0x00470007	mov    %esi,(%esp)
+0x0047000A	call   0x41b57c <_Unwind_SjLj_Unregister>
+0x0047000F	xor    %eax,%eax
+0x00470011	lea    -0xc(%ebp),%esp
+0x00470014	pop    %ecx
+0x00470015	pop    %ebx
+0x00470016	pop    %esi
+0x00470017	pop    %ebp
+0x00470018	lea    -0x4(%ecx),%esp
+0x0047001B	ret
+0x0047001C	fxch   %st(1)
+0x0047001E	fucompp
+0x00470020	fnstsw %ax
+0x00470022	test   $0x5,%ah
+0x00470025	jne    0x46f953 <main()+1743>
+0x0047002B	mov    -0x94(%ebp),%ecx
+0x00470031	call   0x4015c8 <enemy::die()>
+0x00470036	jmp    0x46f953 <main()+1743>
+0x0047003B	movl   $0x4,-0x88(%ebp)
+0x00470045	mov    $0x473453,%eax
+0x0047004A	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x0047004F	mov    %eax,(%esp)
+0x00470052	call   0x46c364 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)>
+0x00470057	jmp    0x46f953 <main()+1743>
+0x0047005C	movl   $0x4,-0x88(%ebp)
+0x00470066	mov    $0x47347a,%eax
+0x0047006B	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x00470070	jmp    0x47004f <main()+3531>
+0x00470072	movl   $0x4,-0x88(%ebp)
+0x0047007C	mov    $0x4734e8,%eax
+0x00470081	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x00470086	jmp    0x47004f <main()+3531>
+0x00470088	add    $0x18,%ebp
+0x0047008B	mov    -0x84(%ebp),%edx
+0x00470091	mov    %edx,-0x94(%ebp)
+0x00470097	mov    -0x88(%ebp),%eax
+0x0047009D	jmp    *0x4735a0(,%eax,4)
+0x004700A4	mov    %edx,0x47c014
+0x004700AA	jmp    0x46fbde <main()+2394>
+0x004700AF	fnstcw -0x8e(%ebp)
+0x004700B5	mov    -0x8e(%ebp),%ax
+0x004700BC	mov    $0xc,%ah
+0x004700BE	mov    %ax,-0x90(%ebp)
+0x004700C5	fldcw  -0x90(%ebp)
+0x004700CB	fistpl 0x4(%esp)
+0x004700CF	fldcw  -0x8e(%ebp)
+0x004700D5	lea    -0x20(%ebp),%ebx
+0x004700D8	mov    %ebx,(%esp)
+0x004700DB	movl   $0x10,-0x88(%ebp)
+0x004700E5	call   0x405950 <numberToString(int)>
+0x004700EA	movl   $0xa,0x8(%esp)
+0x004700F2	movl   $0x473499,0x4(%esp)
+0x004700FA	movl   $0x0,(%esp)
+0x00470101	movl   $0x11,-0x88(%ebp)
+0x0047010B	mov    %ebx,%ecx
+0x0047010D	call   0x44efb8 <std::string::insert(unsigned int, char const*, unsigned int)>
+0x00470112	sub    $0xc,%esp
+0x00470115	mov    %eax,-0x94(%ebp)
+0x0047011B	mov    %eax,%esi
+0x0047011D	mov    (%eax),%eax
+0x0047011F	mov    %eax,-0x1c(%ebp)
+0x00470122	lea    -0x51(%ebp),%eax
+0x00470125	mov    %eax,0x8(%esp)
+0x00470129	movl   $0x0,0x4(%esp)
+0x00470131	movl   $0x0,(%esp)
+0x00470138	movl   $0x0,-0x88(%ebp)
+0x00470142	call   0x44e100 <std::string::_S_construct(unsigned int, char, std::allocator<char> const&)>
+0x00470147	mov    %eax,(%esi)
+0x00470149	movl   $0x7,0x4(%esp)
+0x00470151	movl   $0x4734a4,(%esp)
+0x00470158	movl   $0x12,-0x88(%ebp)
+0x00470162	lea    -0x1c(%ebp),%ecx
+0x00470165	call   0x44ea60 <std::string::append(char const*, unsigned int)>
+0x0047016A	push   %edx
+0x0047016B	push   %edx
+0x0047016C	mov    %eax,-0x94(%ebp)
+0x00470172	mov    (%eax),%eax
+0x00470174	mov    %eax,-0x24(%ebp)
+0x00470177	lea    -0x51(%ebp),%ecx
+0x0047017A	mov    %ecx,0x8(%esp)
+0x0047017E	movl   $0x0,0x4(%esp)
+0x00470186	movl   $0x0,(%esp)
+0x0047018D	movl   $0x0,-0x88(%ebp)
+0x00470197	call   0x44e100 <std::string::_S_construct(unsigned int, char, std::allocator<char> const&)>
+0x0047019C	mov    -0x94(%ebp),%ebx
+0x004701A2	mov    %eax,(%ebx)
+0x004701A4	lea    -0x1c(%ebp),%ecx
+0x004701A7	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004701AC	lea    -0x20(%ebp),%ecx
+0x004701AF	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004701B4	jmp    0x46f91f <main()+1691>
+0x004701B9	mov    0xc(%ecx,%edx,4),%eax
+0x004701BD	mov    -0x94(%ebp),%esi
+0x004701C3	jmp    0x46f5a2 <main()+798>
+0x004701C8	call   0x407914 <std::__throw_bad_cast()>
+0x004701CD	call   0x407914 <std::__throw_bad_cast()>
+0x004701D2	movl   $0x4733d7,(%esp)
+0x004701D9	movl   $0x3,-0x88(%ebp)
+0x004701E3	call   0x407d24 <std::__throw_out_of_range(char const*)>
+0x004701E8	call   0x407914 <std::__throw_bad_cast()>
+0x004701ED	movsbl (%eax),%ecx
+0x004701F0	mov    -0x98(%ebp),%ebx
+0x004701F6	mov    -0xa4(%ebx,%ecx,4),%ecx
+0x004701FD	cmpb   $0x0,0x8(%ecx)
+0x00470201	jne    0x47021d <main()+3993>
+0x00470203	mov    %ebx,-0x94(%ebp)
+0x00470209	jmp    0x46fd29 <main()+2725>
+0x0047020E	movl   $0xffffffff,-0x88(%ebp)
+0x00470218	call   0x407914 <std::__throw_bad_cast()>
+0x0047021D	mov    -0x98(%ebp),%eax
+0x00470223	mov    %eax,-0x94(%ebp)
+0x00470229	jmp    0x46f5e4 <main()+864>
+0x0047022E	movl   $0x4,-0x88(%ebp)
+0x00470238	mov    $0x4734b4,%eax
+0x0047023D	call   0x401568 <std::operator<< <std::char_traits<char> >(char const*, std::basic_ostream<char, std::char_traits<char> >&)>
+0x00470242	jmp    0x47004f <main()+3531>
+0x00470247	mov    -0x94(%ebp),%eax
+0x0047024D	mov    %eax,0x47c014
+0x00470252	jmp    0x46fabc <main()+2104>
+0x00470257	lea    -0x40(%ebp),%ecx
+0x0047025A	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0047025F	lea    -0x44(%ebp),%ecx
+0x00470262	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x00470267	lea    -0x4c(%ebp),%ecx
+0x0047026A	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0047026F	lea    -0x50(%ebp),%ecx
+0x00470272	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x00470277	mov    -0x94(%ebp),%ecx
+0x0047027D	mov    %ecx,(%esp)
+0x00470280	movl   $0xffffffff,-0x88(%ebp)
+0x0047028A	call   0x41b99c <_Unwind_SjLj_Resume>
+0x0047028F	lea    -0x38(%ebp),%ecx
+0x00470292	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x00470297	lea    -0x3c(%ebp),%ecx
+0x0047029A	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x0047029F	jmp    0x470267 <main()+4067>
+0x004702A1	lea    -0x30(%ebp),%ecx
+0x004702A4	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702A9	lea    -0x34(%ebp),%ecx
+0x004702AC	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702B1	jmp    0x470267 <main()+4067>
+0x004702B3	lea    -0x28(%ebp),%ecx
+0x004702B6	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702BB	lea    -0x2c(%ebp),%ecx
+0x004702BE	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702C3	jmp    0x470267 <main()+4067>
+0x004702C5	lea    -0x24(%ebp),%ecx
+0x004702C8	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702CD	jmp    0x470267 <main()+4067>
+0x004702CF	lea    -0x48(%ebp),%ecx
+0x004702D2	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702D7	jmp    0x47026f <main()+4075>
+0x004702D9	lea    -0x1c(%ebp),%ecx
+0x004702DC	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702E1	lea    -0x20(%ebp),%ecx
+0x004702E4	call   0x45020c <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+0x004702E9	jmp    0x470267 <main()+4067>
