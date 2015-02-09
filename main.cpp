@@ -5,7 +5,7 @@
 using namespace std;
 bool defaultItemFunction()
 {
-    //cout<<"Wait... what??"<<endl;
+    cout<<"Wait... what??"<<endl;
     return false;
 }
 class item
@@ -21,15 +21,6 @@ public:
         strength = st;
     }
 };
-
-/*class option
-{
-public:
-    bool itemorattack = false;//item
-    int itemindex = 0;
-    bool (*exec)(bool,int);
-    option *nextoption = 0;
-};*/
 class room;
 class enemy
 {
@@ -69,10 +60,12 @@ void enemy::die()
     if(lastEnemy == 0)
     {
         inroom->startenemy = nextenemy;
+        nextenemy->lastEnemy = 0;
     }
     else
     {
         lastEnemy->nextenemy = nextenemy;
+        nextenemy->lastEnemy = lastEnemy;
     }
     item*traverse = inroom->startroomitem;
     if(traverse == 0)
@@ -802,13 +795,6 @@ int checkformove(string* input,room inroom)
             parsedoption = parse(inroom.connectedrooms[i]->old? inroom.connectedrooms[i]->roomname:inroom.connectedrooms[i]->newroomname);
             int n =0;
             bool check = contains(input,parsedoption);
-           /*while(parsedoption[n]!="@"&&input[n]!="@")
-            {
-                check = check&&decaps(parsedoption[n])==decaps(input[n]);
-                n++;
-            }
-            delete parsedoption;
-            if(n==0)check=false;*/
             if(check)return i;
         }
 
@@ -900,12 +886,10 @@ string getString()
     if((int)s[0]>=48&&(int)s[0]<=52&&currentroom->connectedrooms[(int)s[0]-48]!=0)
     {
         type = 1;
-      //  return s;
     }
     if((int)s[0]>=65&&(int)s[0]<=90)
     {
         type = 2;
-       // return s;
     }
     delete[] words;
     return s;
@@ -913,14 +897,11 @@ string getString()
 int main()
 {
     init();
-    // cout<<numberToString(10)<<endl;
     currentroom = startroom;
     for(int i =0;i<50;i++)
     cout<<endl;
     cout<<startroom->newenterstring<<endl;
-
     printNavChoices();
-    // printItemChoices();
     while(HP>0)
     {
         currentroom->old = true;
@@ -928,18 +909,6 @@ int main()
         type = 0;
         updateEnemies();
         s = getString();
-        //cout<<getSecondWord(s)<<endl;
-
-        /*do
-        {
-            s = "@";
-            while((int)s[0]>52||(int)s[0]<48)
-            {
-                cin>>s;
-            }
-
-        }
-        while(currentroom->connectedrooms[(int)s[0]-48]==0);*/
         printNavChoices();
     }
     cout<<(winflag?"You Win":"Game Over")<<endl;
