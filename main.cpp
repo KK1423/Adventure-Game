@@ -60,11 +60,13 @@ void enemy::die()
     if(lastEnemy == 0)
     {
         inroom->startenemy = nextenemy;
-        nextenemy->lastEnemy = 0;
     }
     else
     {
         lastEnemy->nextenemy = nextenemy;
+    }
+    if(nextenemy != 0)
+    {
         nextenemy->lastEnemy = lastEnemy;
     }
     item*traverse = inroom->startroomitem;
