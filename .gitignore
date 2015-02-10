@@ -72,6 +72,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+#Frickin' Code Blocks files, always ruining everything
 *.depend
 *.layout
 *.cbp
